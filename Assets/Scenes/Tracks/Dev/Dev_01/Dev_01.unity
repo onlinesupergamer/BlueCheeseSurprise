@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: DampingValue
       value: 350
       objectReference: {fileID: 0}
+    - target: {fileID: 2783135494661855360, guid: 28eeacf49ecb76a48bc7bdb004f2b6f9, type: 3}
+      propertyPath: EngineTorque
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2843094399487590404, guid: 28eeacf49ecb76a48bc7bdb004f2b6f9, type: 3}
       propertyPath: m_Name
       value: DeoraII
@@ -428,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5956501454876519098, guid: 28eeacf49ecb76a48bc7bdb004f2b6f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.215
+      value: 7.22
       objectReference: {fileID: 0}
     - target: {fileID: 5956501454876519098, guid: 28eeacf49ecb76a48bc7bdb004f2b6f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -436,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5956501454876519098, guid: 28eeacf49ecb76a48bc7bdb004f2b6f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.09
+      value: 50.93
       objectReference: {fileID: 0}
     - target: {fileID: 5956501454876519098, guid: 28eeacf49ecb76a48bc7bdb004f2b6f9, type: 3}
       propertyPath: m_LocalRotation.w
