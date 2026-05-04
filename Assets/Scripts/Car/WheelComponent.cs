@@ -4,6 +4,7 @@ using UnityEngine;
 public class WheelComponent : MonoBehaviour
 {
     public Rigidbody CarRb;
+    public bool bIsSteering;
 
     public float MaxWheelDistance;
     public float StiffnessValue;
@@ -15,8 +16,15 @@ public class WheelComponent : MonoBehaviour
     float PreviousLength;
     float Force;
 
+    public bool bIsGrounded = false;
 
     void FixedUpdate()
+    {
+        UpdateSuspension();
+        Friction();
+    }
+
+    void UpdateSuspension()
     {
         Vector3 Start = transform.position;
         Vector3 End = -transform.up;
@@ -33,9 +41,32 @@ public class WheelComponent : MonoBehaviour
 
             PreviousLength = CurrentLength;
 
-
+            bIsGrounded = true;
+        }
+        
+        else
+        {
+            bIsGrounded = false;
         }
 
         Debug.DrawRay(Start, End * MaxWheelDistance, Color.red, 0.0f);
     }
+
+    void Friction()
+    {
+        if(bIsGrounded)
+        {
+            Vector3 SteeringDir = transform.right;
+            Vector3 TireVelocity = CarRb.GetPointVelocity(transform.position);
+            float SteeringVel = Vector3.Dot(SteeringDir, TireVelocity);
+            float XTraction = 1.0f;
+            float Gravity = 9.81f;
+            Vector3 XForce = -SteeringDir * SteeringVel * XTraction * ((CarRb.mass * Gravity) / 4.0f);
+            Vector3 ForcePosition = transform.position;
+
+            CarRb.AddForceAtPosition(XForce, ForcePosition);
+        }
+    }
+
+    
 }
