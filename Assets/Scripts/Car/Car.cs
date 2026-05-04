@@ -4,6 +4,7 @@ public class Car : MonoBehaviour
 {
     
     public Rigidbody CarRb;
+    public float GravityValue;
 
     [Header("Wheel Settings")]
     public WheelComponent[] Wheels = new WheelComponent[4];
@@ -20,6 +21,7 @@ public class Car : MonoBehaviour
 
     void FixedUpdate()
     {
+        Gravity();
         Drive();
         Steer();
     }
@@ -60,6 +62,22 @@ public class Car : MonoBehaviour
         }
     }
     
+    void Gravity()
+    {
+        Vector3 GravityForce = new Vector3(0, 0, 0);
+        if(Wheels[0].bIsGrounded || Wheels[1].bIsGrounded ||Wheels[2].bIsGrounded ||Wheels[3].bIsGrounded)
+        {
+            GravityForce = -transform.up * GravityValue;
+        }
+
+        else
+        {
+            GravityForce = -Vector3.up * GravityValue;
+            
+        }
+
+        CarRb.AddForce(GravityForce * Time.deltaTime);
+    }
 
     public float GetCurrentSpeed()
     {
