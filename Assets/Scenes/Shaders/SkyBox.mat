@@ -38,15 +38,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _HorizonBlend: 7
-    - _NadirBlend: 0.1
+    - _HorizonBlend: 0.88
+    - _NadirBlend: 0.06
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ZenithBlend: 1.5
+    - _ZenithBlend: 0.34
     m_Colors:
     - _GroundColor: {r: 0.14159843, g: 0.5003188, b: 0.8113208, a: 1}
-    - _HorizonColor: {r: 0.2791474, g: 0.4140419, b: 0.4811321, a: 1}
-    - _SkyColor: {r: 0.25, g: 0.389824, b: 1, a: 1}
+    - _HorizonColor: {r: 0.7653525, g: 0.7989433, b: 0.8584906, a: 1}
+    - _SkyColor: {r: 0.38892844, g: 0.5611429, b: 0.8679245, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5161024554215774246

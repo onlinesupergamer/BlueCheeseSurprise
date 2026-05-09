@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: feca7ddba2b537544a18de0516f1c305
+guid: 564feae177a1085429945a7bb2a34036
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,13 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Sidewall
-    second: {fileID: 2100000, guid: e9c727a4f0d44f945891091f284b2e9e, type: 2}
+      name: Deora_II
+    second: {fileID: 2100000, guid: fc655878a0fb2be43a9bb17f5ac092c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Track_01
-    second: {fileID: 2100000, guid: 6491c9fcc4dc61f4699aed9089215567, type: 2}
+      name: Glass_De2
+    second: {fileID: 2100000, guid: 349e9e5becde35e42aadcc52c668a4b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground_01
+    second: {fileID: 2100000, guid: 760ddc01424815e41addfa747d9cd9d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track_Blue
+    second: {fileID: 2100000, guid: 6775c6b75c9b7cc4382f11da55f2fac9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track_Orange
+    second: {fileID: 2100000, guid: 0d2e57aed8733e746872f3a2f4841705, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track_Yellow
+    second: {fileID: 2100000, guid: c78643aa56200e1498e43b4ad74e6c62, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

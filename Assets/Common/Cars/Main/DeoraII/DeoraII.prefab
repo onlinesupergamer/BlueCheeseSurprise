@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WheelComponent
   CarRb: {fileID: 1668088489611416488}
   bIsSteering: 0
-  MaxWheelDistance: 0.55
+  MaxWheelDistance: 0.45
   StiffnessValue: 20000
-  RestLength: 0.5
+  RestLength: 0.45
   DampingValue: 350
   bIsGrounded: 0
 --- !u!1 &920926350669026592
@@ -293,9 +293,9 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -313,12 +313,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Car
   CarRb: {fileID: 1668088489611416488}
+  GravityValue: 200000
   Wheels:
   - {fileID: 4729753709048634331}
   - {fileID: 5655205790379135161}
   - {fileID: 467254454529494542}
   - {fileID: 6779226738150109152}
-  MaxSteeringAngle: 30
+  MaxSteeringAngle: 18
   EngineCurve:
     serializedVersion: 2
     m_Curve:
@@ -506,9 +507,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WheelComponent
   CarRb: {fileID: 1668088489611416488}
   bIsSteering: 1
-  MaxWheelDistance: 0.55
+  MaxWheelDistance: 0.45
   StiffnessValue: 20000
-  RestLength: 0.5
+  RestLength: 0.45
   DampingValue: 350
   bIsGrounded: 0
 --- !u!1 &6113509591397435851
@@ -557,9 +558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WheelComponent
   CarRb: {fileID: 1668088489611416488}
   bIsSteering: 1
-  MaxWheelDistance: 0.55
+  MaxWheelDistance: 0.45
   StiffnessValue: 20000
-  RestLength: 0.5
+  RestLength: 0.45
   DampingValue: 350
   bIsGrounded: 0
 --- !u!1 &8355093484612701057
@@ -608,9 +609,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WheelComponent
   CarRb: {fileID: 1668088489611416488}
   bIsSteering: 0
-  MaxWheelDistance: 0.55
+  MaxWheelDistance: 0.45
   StiffnessValue: 20000
-  RestLength: 0.5
+  RestLength: 0.45
   DampingValue: 350
   bIsGrounded: 0
 --- !u!1 &8730669720422097920
