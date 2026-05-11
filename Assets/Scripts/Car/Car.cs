@@ -47,7 +47,7 @@ public class Car : MonoBehaviour
         {
             if(Wheels[i].bIsGrounded)
             {
-                CarRb.AddForceAtPosition(Wheels[i].transform.forward * DriveForce, Wheels[i].Hit.point);
+                CarRb.AddForceAtPosition(Wheels[i].transform.forward * DriveForce * Time.deltaTime, Wheels[i].Hit.point);
             }
         }
     }
