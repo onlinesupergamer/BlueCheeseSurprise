@@ -4,12 +4,15 @@ public class Car : MonoBehaviour
 {
     public Rigidbody CarRb;
 
+    PlayerInputActions m_PlayerInputActions;
+
     [Header("Engine Settings")]
 
     public float EngineTorque;
     public float MaxSpeed;
     public AnimationCurve EngineCurve = new AnimationCurve();
 
+    
 
     [Header("Wheels")]
 
@@ -18,7 +21,22 @@ public class Car : MonoBehaviour
     public AnimationCurve SteeringCurve = new AnimationCurve();
 
 
-    
+
+    void OnEnable()
+    {
+        m_PlayerInputActions.Enable();        
+    }
+
+    void OnDisable()
+    {
+        m_PlayerInputActions.Disable();
+    }
+
+    void Awake()
+    {
+        m_PlayerInputActions = new PlayerInputActions();
+    }
+
     void Start()
     {
         
@@ -39,8 +57,8 @@ public class Car : MonoBehaviour
 
     void Accelerate()
     {
-        float PlayerInput = Input.GetAxisRaw("Accelerate");
-        float SpeedRatio =  GetCurrentSpeed() / MaxSpeed;
+        float PlayerInput = m_PlayerInputActions.Drive.Accelerate.ReadValue<float>();
+        float SpeedRatio = GetCurrentSpeed() / MaxSpeed;
         float DriveForce = EngineCurve.Evaluate(Mathf.Abs(SpeedRatio)) * EngineTorque * PlayerInput;
 
         for(int i = 0; i < Wheels.Length; i++)
@@ -54,7 +72,7 @@ public class Car : MonoBehaviour
 
     void Steer()
     {
-        float PlayerInput = Input.GetAxisRaw("Steer");
+        float PlayerInput = m_PlayerInputActions.Drive.Steer.ReadValue<float>();
         float SpeedRatio = GetCurrentSpeed() / MaxSpeed;
         float SteeringAngle = SteeringCurve.Evaluate(SpeedRatio) * MaxWheelAngle;
         for(int i = 0; i < Wheels.Length; i++)
