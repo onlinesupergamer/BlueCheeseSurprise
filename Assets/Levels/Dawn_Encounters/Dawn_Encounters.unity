@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Car
   CarRb: {fileID: 1577215132}
-  EngineTorque: 70000
+  EngineTorque: 30000
   MaxSpeed: 30
   EngineCurve:
     serializedVersion: 2
