@@ -39,7 +39,7 @@ public class Car : MonoBehaviour
 
     void Accelerate()
     {
-        float PlayerInput = Input.GetAxis("Accelerate");
+        float PlayerInput = Input.GetAxisRaw("Accelerate");
         float SpeedRatio =  GetCurrentSpeed() / MaxSpeed;
         float DriveForce = EngineCurve.Evaluate(Mathf.Abs(SpeedRatio)) * EngineTorque * PlayerInput;
 
@@ -54,7 +54,7 @@ public class Car : MonoBehaviour
 
     void Steer()
     {
-        float PlayerInput = Input.GetAxis("Steer");
+        float PlayerInput = Input.GetAxisRaw("Steer");
         float SpeedRatio = GetCurrentSpeed() / MaxSpeed;
         float SteeringAngle = SteeringCurve.Evaluate(SpeedRatio) * MaxWheelAngle;
         for(int i = 0; i < Wheels.Length; i++)
